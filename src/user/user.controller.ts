@@ -28,4 +28,13 @@ export class UserController {
       (userEntity) => new ReturnUserDto(userEntity),
     );
   }
+
+  @Get('/:userId')
+  async getUserByIdUsingRelations(
+    @Param('userId') userId: number,
+  ): Promise<ReturnUserDto> {
+    return new ReturnUserDto(
+      await this.userService.getUserByIdUsingRelations(userId),
+    );
+  }
 }
