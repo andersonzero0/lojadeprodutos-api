@@ -10,11 +10,11 @@ export class ReturnUserDto {
   addresses?: ReturnAddressDto[];
 
   constructor(userEntity: UserEntity) {
-    (this.id = userEntity.id),
-      (this.name = userEntity.name),
-      (this.email = userEntity.email),
-      (this.phone = userEntity.phone),
-      (this.cpf = userEntity.cpf);
+    this.id = userEntity.id;
+    this.name = userEntity.name;
+    this.email = userEntity.email;
+    this.phone = userEntity.phone;
+    this.cpf = userEntity.cpf;
 
     this.addresses = userEntity.addresses
       ? userEntity.addresses.map((address) => new ReturnAddressDto(address))
