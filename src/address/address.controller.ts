@@ -6,7 +6,7 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
-import { CreateAddressDto } from './dto/createAddress.dto';
+import { CreateAddressDto } from './dtos/createAddress.dto';
 import { AddressService } from './address.service';
 import { AddressEntity } from './entities/address.entity';
 
